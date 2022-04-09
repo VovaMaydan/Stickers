@@ -66,6 +66,7 @@ def check_sticker():
 
 def add_sticker():
     global add_sticker_label
+    add_sticker_label.destroy()
     sticker_number = check_sticker_entry.get()
     sticker_name = new_sticker_entry.get()
     journal[sticker_number] = sticker_name
@@ -77,6 +78,7 @@ def add_sticker():
 def sticker_rest():
     global sticker_count
     global sticker_rest_label
+    add_sticker_label.destroy()
     collected_sticker_label.destroy()
     sticker_rest_label.destroy()
     sticker_count = 0
@@ -113,6 +115,7 @@ random_number = random.randint(1, 8)
 greeting_picture = ImageTk.PhotoImage(Image.open("Winners/"+str(random_number)+".jpg"))
 greeting_picture_label = Label(frame, image=greeting_picture, width=500, height=280)
 greeting_picture_label.grid(row=0, column=2)
+
 
 greeting_label = Label(frame, text="Please enter the number of the sticker:")
 greeting_label.grid(row=5, column=2)

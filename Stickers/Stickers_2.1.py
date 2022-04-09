@@ -43,6 +43,7 @@ def check_sticker():
     new_sticker_entry.destroy()
     add_new_sticker_button.destroy()
     add_sticker_label.destroy()
+    sticker_rest_label.destroy()
     sticker_number = check_sticker_entry.get()
     if sticker_number == "":
         collected_sticker_label = Label(frame, text="You didn't write a number")

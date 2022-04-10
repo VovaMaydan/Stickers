@@ -6,7 +6,7 @@ import random
 
 root = Tk()
 root.title("Sticker Collection")
-root.iconbitmap('e:/Stickers/Logo.ico')
+root.iconbitmap('e:/GitHub/Stickers/Logo.ico')
 
 collected_sticker_label = Label(root)
 new_sticker_label = Label(root)
@@ -95,10 +95,10 @@ def sticker_rest():
         sticker_rest_label = Label(frame, text="You have already collected a "+str(percentage)+"% of the album")
         sticker_rest_label.grid(row=10, column=2)
     else:
-        for team_count in range(0, 32):
+        for team_count in range(0, 33):
             if team_name == TEAMS[team_count]["name"]:
                 selected_team = team_count
-                min_number = TEAMS[selected_team]["minRange"]
+                min_number = TEAMS[selected_team]["minRange"]+1
                 max_number = TEAMS[selected_team]["maxRange"]
                 for sticker in range(int(min_number),int(max_number)):
                     if str(sticker) in journal:
